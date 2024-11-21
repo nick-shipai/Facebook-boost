@@ -1,0 +1,80 @@
+/* update.css */
+body {
+    font-family: monospace;
+    
+}
+
+#title {
+    font-size: 20px;
+}
+
+  body {
+    font-family: monospace;
+    text-align: center;
+}
+
+#title {
+    font-size: 20px;
+}
+
+#profilePicDiv {
+    height: 150px;
+    width: 150px;
+    background-color: #d2d2d2;
+    border-radius: 50%;
+    position: relative;  /* Important for positioning the camera icon inside */
+    display: inline-block;
+    border: 5px solid black;
+}
+
+#profilePic {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#upload {
+    position: absolute;  /* Position the camera icon inside profilePicDiv */
+    
+    
+    height: 40px;  /* Set the icon size */
+    width: 40px;   /* Set the icon size */
+    background-color: white;  /* White background for visibility */
+    border-radius: 50%;  /* Circular button */
+    padding: 8px;  /* Optional, adds space inside the icon */
+ /* Make it clickable */
+    border: 2px solid #ddd;  /* Optional, adds a border around the icon */
+    margin-top: 105px;
+    margin-right: 100px;
+    position: relative;  /* Ensure the element can be moved */
+    margin-left: -54px;
+    margin-top: 95px;
+position: fixed;
+}
+#usernameInput, #selInput {
+    border: none;
+    outline: none;
+    width: 260px;
+    height: 35px;
+    font-family: monospace;
+    background-color: white;
+    
+}
+#usernameInputDiv, #contentInputDiv {
+    border: 1px solid black;pp
+    height: 40px;
+    width: 270px;
+    border-radius: 5px;
+    margin-left: 35px;
+}
+#save {
+    margin-left: 35px;
+    width: 300px;
+    height: 45px;
+    margin-left: 20px;
+    background-color: black;
+    color: white;
+    border: 0px solid black;
+    font-family: monospace;
+    border-radius: 5px;
+}

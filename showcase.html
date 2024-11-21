@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="showcase.css">
+    <title>Social Book</title>
+</head>
+<body>
+    <div id="container"><br><br><br>
+        <h2 id="title">EARN CREATING CONTENT</h2>
+        <div id="swithShow"><br>
+            <div id="dollaSocial">
+                <img src="coin.png" alt="Social-book" id="logo"><br><br>
+                <div id="dis">Earn money from Social Book</div>
+            </div>
+            <div id="conToDol">
+                <div id="con-mon">
+                    <img src="content.png" alt="" id="con">
+                    <span id="equal">TO</span>
+                    <img src="dollar.png" alt="" id="mon">
+                </div><br><br>
+                <div id="dis">Earn money from creating content</div><br>
+            </div>
+            <div id="getPup" style="display: none;">
+                <img src="pop.png" alt="" id="pop"><br><br>
+                <div id="dis">Get Popular</div><br><br>
+            </div>
+            <div id="swithDot">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div><br><br><br>
+        
+        <button id="Start" onclick="window.location.href ='login.html'">Start Earning</button>
+    </div>
+
+    <script>
+       // JavaScript for automatic switching
+const dollarSocial = document.getElementById('dollaSocial');
+const conToDol = document.getElementById('conToDol');
+const getPup = document.getElementById('getPup'); // Reference to getPup
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+
+// Function to switch content
+function switchContent() {
+    // Hide all sections first
+    dollarSocial.style.display = 'none';
+    conToDol.style.display = 'none';
+    getPup.style.display = 'none';
+
+    // Reset the transform of each section before showing the next
+    dollarSocial.style.transform = 'translateX(100%)';
+    conToDol.style.transform = 'translateX(100%)';
+    getPup.style.transform = 'translateX(100%)';
+
+    // Show the current section and update the active dot
+    if (currentIndex === 0) {
+        dollarSocial.style.display = 'block';
+        dollarSocial.style.transform = 'translateX(0)'; // Slide in
+        dots[0].classList.add('active');
+        dots[1].classList.remove('active');
+        dots[2].classList.remove('active');
+    } else if (currentIndex === 1) {
+        conToDol.style.display = 'block';
+        conToDol.style.transform = 'translateX(0)'; // Slide in
+        dots[0].classList.remove('active');
+        dots[1].classList.add('active');
+        dots[2].classList.remove('active');
+    } else {
+        getPup.style.display = 'block';
+        getPup.style.transform = 'translateX(0)'; // Slide in
+        dots[0].classList.remove('active');
+        dots[1].classList.remove('active');
+        dots[2].classList.add('active');
+    }
+
+    currentIndex = (currentIndex + 1) % 3; // Toggle between 0, 1, and 2
+}
+
+// Initially show the dollarSocial section
+dollarSocial.style.display = 'block';
+conToDol.style.display = 'none'; // Ensure conToDol starts hidden
+getPup.style.display = 'none'; // Ensure getPup starts hidden
+
+// Set initial transform for conToDol and getPup to be off-screen
+conToDol.style.transform = 'translateX(100%)';
+getPup.style.transform = 'translateX(100%)';
+
+// Switch content every 3 seconds
+setInterval(switchContent, 3000);
+    </script>
+</body>
+</html>

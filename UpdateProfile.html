@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="update.css">
+    <title>- Complete And Earn</title>
+</head>
+<body>
+    <div id="container">
+        <br><br><br>
+        <!-- Content of the page goes here -->
+        <h3 id="title">Complete Your Profile</h3>
+        <div id="proIcon">
+        <div id="profilePicDiv">
+            <img src="hhh.png" alt="" id="profilePic">
+        </div>
+        <img src="edit.png" alt="" id="upload">
+        </div>
+        <br><br>
+        <form id="inputForm">
+            <div id="inputFormDiv">
+                <div id="usernameInputDiv">
+                    <input type="username" id="usernameInput" placeholder="USERNAME">
+                </div>
+                <br><br>
+                <div id="contentInputDiv">
+                    <select id="selInput">
+                        <option>Choose Your Content To Create</option>
+                        <option>Education</option>
+                                                <option>
+                                                        Craft And Art
+                        </option>
+                        <option>Digital Creator</option>
+                        <option>Sports</option>
+                        <option>Comedy</option>
+                        <option>Gospel And Church</option>
+                        <option>Web development</option>
+                        <option>Influencer</option>
+                        <option>Gaming</option>
+                        <option>movies </option>
+                        <option>Shows</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div><br><br>
+            <button id="save">Save</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to retrieve query parameters by name
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the username from the query parameters
+        const username = getQueryParam('username');
+
+        // Set the document title to "{username} - Complete And Earn" if username is found
+        if (username) {
+            document.title = `${username} - Complete And Earn`;
+        }
+    </script>
+</body>
+</html>
